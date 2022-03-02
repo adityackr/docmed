@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Utilities */
+.contents {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+/* Header starts */
+.upper-header {
+	background-color: #f5fbff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.header-icons i {
+	padding-right: 10px;
+	color: #c7c7c7;
+	cursor: pointer;
+}
+
+.header-icons i:hover {
+	color: #5db2ff;
+}
+
+.header-contact {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.header-contact p {
+	margin-left: 45px;
+	font-size: 14px;
+	color: #727272;
+	cursor: pointer;
+}
+
+.header-contact p i {
+	color: #5db2ff;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+.lower-header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+nav ul li {
+	position: relative;
+}
+
+nav ul li a {
+	text-decoration: none;
+	margin-right: 20px;
+	color: #727272;
+	font-size: 14px;
+}
+
+nav ul li a:hover {
+	color: #000;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul ul {
+	position: absolute;
+	left: 0;
+	top: 160%;
+	background-color: #fff;
+	width: 200px;
+	z-index: 2;
+	box-shadow: 0 0 10px rgb(0 0 0 / 2%);
+	text-align: left;
+	flex-direction: column;
+	display: none;
+	transition: 0.6s;
+}
+
+nav ul ul li {
+	display: block;
+	align-self: flex-start;
+	padding-left: 15px;
+}
+
+nav ul ul li a {
+	color: #000;
+}
+
+.btn-appointment {
+	background-color: #009dff;
+	border: 1px solid #009dff;
+	outline: none;
+	color: #fff;
+	padding: 15px 25px;
+	font-size: 14px;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+
+.btn-appointment:hover {
+	color: #009dff;
+	background-color: #fff;
+}
+
+.btn-check {
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.9);
+	line-height: 80px;
+	display: none;
+	cursor: pointer;
+}
+
+#check {
+	display: none;
+}
+/* Header ends */
+
+/* Slider starts */
+.slider-section {
+	height: 100vh;
+	width: 100%;
+	background: url('img/slider1.png') no-repeat center center / cover;
+}
+
+.slider {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.slider-content {
+	width: 70%;
+	padding: 200px 0;
+}
+
+.slider-content h1 {
+	font-weight: 900;
+	font-size: 70px;
+}
+
+.slider-content h2 {
+	font-size: 60px;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.slider-content p {
+	font-size: 18px;
+	width: 80%;
+	color: #727272;
+}
+
+.btn-service {
+	padding: 20px 40px;
+	margin-top: 40px;
+	background: linear-gradient(90deg, #0382f6, #5bb1ff);
+	outline: none;
+	border: 1px solid #0382f6;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.btn-service:hover {
+	color: #0382f6;
+	background: #fff;
+}
+/* Slider ends */
+
+/* Media Queries */
+@media (max-width: 1100px) {
+	nav ul {
+		display: none;
+	}
+
+	.btn-check {
+		display: block;
+	}
+
+	nav {
+		order: 3;
+	}
+
+	nav ul {
+		display: block;
+		position: fixed;
+		width: 50%;
+		height: 100vh;
+		background: #f9f9ff;
+		top: 0;
+		left: -200%;
+		transition: all 0.1s;
+		padding-left: 50px;
+		padding-top: 50px;
+	}
+	nav ul li {
+		line-height: 30px;
+		margin-top: 15px;
+	}
+
+	nav ul ul {
+		height: fit-content;
+		padding-top: 0;
+	}
+
+	#check:checked ~ ul {
+		position: absolute;
+		left: 0;
+	}
+}
+
+@media (max-width: 992px) {
+    .slider-content {
+        padding-top: 100px;
+    }
+
+	.slider-content h1 {
+		font-size: 40px;
+	}
+	.slider-content h2 {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 550px) {
+	.btn-appointment {
+		display: none;
+	}
+
+	.upper-header .contents {
+		justify-content: center;
+	}
+
+	.header-contact {
+		justify-content: center;
+	}
+
+	.header-contact p {
+		margin-left: 10px;
+	}
+
+    .slider-content p {
+        font-size: 16px;
+    }
+
+    .btn-service {
+        margin-top: 10px;
+        padding: 10px;
+    }
+}
