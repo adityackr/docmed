@@ -180,7 +180,7 @@ nav ul ul li a {
 	height: 100vh;
 	width: 50%;
 	background: url('img/slider1.png') no-repeat center center / cover;
-    float: left;
+	float: left;
 }
 
 .slider {
@@ -230,54 +230,140 @@ nav ul ul li a {
 
 /* Services starts */
 .services {
-    background-color: #83c4ff;
-    color: #fff;
-    flex-wrap: nowrap;
+	background-color: #83c4ff;
+	color: #fff;
+	flex-wrap: nowrap;
 }
 
 .service {
-    max-width: 33.33333%;
-    padding: 50px 10px 50px 30px;
+	max-width: 33.33333%;
+	padding: 50px 10px 50px 30px;
 }
 
 .service i {
-    font-size: 50px;
+	font-size: 50px;
 }
 
 .service h3 {
-    font-size: 28px;
-    font-weight: 400;
-    margin: 20px 0;
+	font-size: 28px;
+	font-weight: 400;
+	margin: 20px 0;
 }
 
 .service input {
-    background-color: transparent;
-    border: 1px solid #fff;
-    padding: 10px 25px;
-    color: #fff;
-    font-size: 16px;
-    margin-top: 20px;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 20px;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
 }
 
 .service input:hover {
-    background-color: #fff;
-    color: #0382f6;
+	background-color: #fff;
+	color: #0382f6;
 }
 
 .service:nth-child(2) {
-    background-color: #5db2ff;
+	background-color: #5db2ff;
 }
 /* Services ends */
 
+/* Welcome section starts */
+.welcome {
+	padding: 120px 0;
+}
 
+.welcome .contents {
+	align-items: flex-start;
+}
 
+.thumb {
+	position: relative;
+	flex: 0 0 50%;
+}
 
+.thumb1 {
+	left: 0;
+}
+
+.thumb2 {
+	position: absolute;
+	right: 0px;
+	bottom: -40px;
+}
+
+.welcome-msg {
+	padding: 0 50px;
+	flex: 0 0 50%;
+}
+
+.welcome-msg h3 {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.welcome-msg hr {
+	width: 15%;
+	height: 2px;
+	background-color: #0382f6;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.welcome-msg h1 {
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.welcome-msg p {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: 300;
+	color: #727272;
+}
+
+.welcome-msg ul {
+	list-style: none;
+	margin-bottom: 30px;
+}
+
+.welcome-msg ul li {
+	font-size: 16px;
+	font-weight: 400;
+	color: #727272;
+}
+
+.welcome-msg ul li i {
+	color: #0382f6;
+	margin-right: 10px;
+}
+
+.welcome-msg input {
+	border: 1px solid #0382f6;
+	color: #0382f6;
+	padding: 10px 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.welcome-msg input:hover {
+	background-color: #0382f6;
+	color: #fff;
+}
+/* Welcome section ends */
 
 /* Media Queries */
 @media (max-width: 1100px) {
+	.contents {
+		max-width: 90%;
+	}
+
 	nav ul {
 		display: none;
 	}
@@ -301,6 +387,7 @@ nav ul ul li a {
 		transition: all 0.1s;
 		padding-left: 50px;
 		padding-top: 50px;
+        z-index: 997;
 	}
 	nav ul li {
 		line-height: 30px;
@@ -330,18 +417,28 @@ nav ul ul li a {
 		font-size: 40px;
 	}
 
-    .services .contents {
-        flex-direction: column;
-    }
+	.services .contents {
+		flex-direction: column;
+	}
 
-    .service {
-        max-width: 100%;
-    }
+	.service {
+		max-width: 100%;
+	}
+
+	.welcome .contents {
+		flex-direction: column;
+	}
+
+	.thumb {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
 }
 
 @media (max-width: 550px) {
     .contents {
-        max-width: 90%;
+        max-width: 95%;
     }
 
 	.btn-appointment {
@@ -367,5 +464,38 @@ nav ul ul li a {
 	.btn-service {
 		margin-top: 10px;
 		padding: 10px;
+	}
+
+	.thumb2 {
+		left: 0;
+		top: 0;
+		display: none;
+	}
+
+	.thumb1 {
+		text-align: center;
+		object-fit: contain;
+	}
+}
+
+@media (max-width: 450px) {
+    .contents {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .thumb1 img{
+        max-width: 250px;
+        padding-left: 0;
+        margin: auto;
+    }
+
+	.slider-content h1 {
+		font-size: 30px;
+	}
+
+	.slider-content h2 {
+		font-size: 30px;
+		letter-spacing: 0;
 	}
 }
