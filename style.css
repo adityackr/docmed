@@ -358,6 +358,88 @@ nav ul ul li a {
 }
 /* Welcome section ends */
 
+/* Department section starts */
+.departments {
+    background-color: #f5fbff;
+    padding: 100px 0;
+}
+
+.dept-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.dept-heading h1 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.dept-heading hr {
+    width: 50px;
+    height: 2px;
+    border: none;
+    background-color: #0382f6;
+    margin: 5px auto;
+}
+
+.dept-heading p {
+    font-weight: 300;
+    color: #727272;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    transition: all ease-in 0.3s;
+}
+
+.card h3, .card p, .card a {
+    padding-left: 30px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.card p {
+    font-weight: 300;
+    color: #727272;
+    margin: 5px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: #009dff;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+/* Department section ends */
+
+
+
 /* Media Queries */
 @media (max-width: 1100px) {
 	.contents {
@@ -406,6 +488,7 @@ nav ul ul li a {
 }
 
 @media (max-width: 992px) {
+
 	.slider-content {
 		padding-top: 100px;
 	}
@@ -434,6 +517,23 @@ nav ul ul li a {
 		margin: 0 auto;
 		margin-bottom: 100px;
 	}
+
+    .card {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .card {
+        max-width: 100%;
+        
+    }
 }
 
 @media (max-width: 550px) {
