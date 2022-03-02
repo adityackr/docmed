@@ -228,6 +228,54 @@ nav ul ul li a {
 }
 /* Slider ends */
 
+/* Services starts */
+.services {
+    background-color: #83c4ff;
+    color: #fff;
+    flex-wrap: nowrap;
+}
+
+.service {
+    max-width: 33.33333%;
+    padding: 50px 10px 50px 30px;
+}
+
+.service i {
+    font-size: 50px;
+}
+
+.service h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.service input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.service input:hover {
+    background-color: #fff;
+    color: #0382f6;
+}
+
+.service:nth-child(2) {
+    background-color: #5db2ff;
+}
+/* Services ends */
+
+
+
+
+
 /* Media Queries */
 @media (max-width: 1100px) {
 	nav ul {
@@ -281,9 +329,21 @@ nav ul ul li a {
 	.slider-content h2 {
 		font-size: 40px;
 	}
+
+    .services .contents {
+        flex-direction: column;
+    }
+
+    .service {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 550px) {
+    .contents {
+        max-width: 90%;
+    }
+
 	.btn-appointment {
 		display: none;
 	}
@@ -297,7 +357,7 @@ nav ul ul li a {
 	}
 
 	.header-contact p {
-		margin-left: 10px;
+		margin-left: 20px;
 	}
 
 	.slider-content p {
