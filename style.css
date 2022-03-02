@@ -487,12 +487,12 @@ nav ul ul li a {
 .mytabs {
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-between;
+	justify-content: space-between;
 	max-width: 80%;
 	margin: 0 auto;
 	padding: 25px;
-    background-color: #f5fbff;
-    border-bottom: 1px solid #727272;
+	background-color: #f5fbff;
+	border-bottom: 1px solid #727272;
 }
 .mytabs input[type='radio'] {
 	display: none;
@@ -501,7 +501,7 @@ nav ul ul li a {
 	padding: 25px;
 	font-weight: bold;
 	background-color: #f5fbff;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .mytabs .tab {
@@ -513,39 +513,40 @@ nav ul ul li a {
 }
 
 .tab-contents {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.tab-contents img, .text-part {
-    flex: 0 0 50%;
-    max-width: 50%;
+.tab-contents img,
+.text-part {
+	flex: 0 0 50%;
+	max-width: 50%;
 }
 
 .text-part {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 
 .mytabs .tab i {
-    font-size: 35px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: #0382f6;
-    padding: 15px;
-    margin-bottom: 20px;
+	font-size: 35px;
+	border-radius: 50%;
+	color: #fff;
+	background-color: #0382f6;
+	padding: 15px;
+	margin-bottom: 20px;
 }
 
 .mytabs .tab h2 {
 	font-size: 20px;
-    font-weight: 500;
+	font-weight: 500;
 }
 
 .mytabs .tab p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #727272;
-    margin-top: 10px;
+	font-size: 16px;
+	font-weight: 300;
+	color: #727272;
+	margin-top: 10px;
 }
 
 .mytabs input[type='radio']:checked + label + .tab {
@@ -585,7 +586,7 @@ nav ul ul li a {
 
 .doctor-card {
 	text-align: center;
-	background-color: #F5FBFF;
+	background-color: #f5fbff;
 	border-radius: 5px;
 	flex: 0 0 0 20%;
 	max-width: 20%;
@@ -616,12 +617,12 @@ nav ul ul li a {
 }
 
 .emergency-contact {
-	background: url("img/emergency-contact.png") no-repeat center center / cover;
+	background: url('img/emergency-contact.png') no-repeat center center / cover;
 	width: 100%;
-	
 }
 
-.ec, .app {
+.ec,
+.app {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -657,13 +658,14 @@ nav ul ul li a {
 	color: #009dff;
 }
 
-.emergency-contact, .appointment{
+.emergency-contact,
+.appointment {
 	flex: 0 0 50%;
 	max-width: 50%;
 }
 
 .appointment {
-	background: url("img/appointment.png") no-repeat center center / cover;
+	background: url('img/appointment.png') no-repeat center center / cover;
 	width: 100%;
 }
 
@@ -672,16 +674,100 @@ nav ul ul li a {
 }
 /* Contact section ends */
 
+/* Footer starts */
+footer {
+	background-color: #1f1f1f;
+}
+
+footer .contents {
+	padding: 120px 0;
+	align-items: flex-start;
+}
+
+footer p {
+	color: #c7c7c7;
+}
+
+footer i {
+	color: #c7c7c7;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #707070;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+footer i:hover {
+	color: #fff;
+}
+
+footer h1 {
+	font-weight: 500;
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.foot-1,
+.foot-2,
+.foot-3 {
+	/* flex: 0 0 33.33333%; */
+	max-width: 33.33333%;
+}
+
+.foot-1 {
+	flex-grow: 2;
+}
+
+.foot-1 p {
+	margin: 30px 0;
+	width: 100%;
+}
+
+.foot-2 {
+	display: flex;
+}
+
+.links {
+	margin-right: 20px;
+}
+
+.links ul {
+	list-style: none;
+}
+
+.links ul li {
+	padding-bottom: 10px;
+}
+
+.links ul li a {
+	text-decoration: none;
+	color: #c7c7c7;
+}
+
+.links ul li a:hover {
+	color: #009dff;
+}
+
+footer .copyright {
+	background-color: #000;
+	color: #fff;
+	padding: 30px 0;
+	text-align: center;
+}
+/* Footer ends */
+
 /* Media Queries */
 @media (max-width: 1300px) {
 	.contacts {
 		flex-direction: column;
 	}
 
-	.emergency-contact, .appointment{
-	flex: 0 0 100%;
-	max-width: 100%;
-}
+	.emergency-contact,
+	.appointment {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
 @media (max-width: 1100px) {
 	.contents {
@@ -764,19 +850,36 @@ nav ul ul li a {
 		max-width: 45%;
 	}
 
-    .mytabs, .tab-contents {
-        flex-direction: column;
-    }
+	.mytabs,
+	.tab-contents {
+		flex-direction: column;
+	}
 
-    .text-part, .tab-contents img {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+	.text-part,
+	.tab-contents img {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 
-    .tab-contents img {
-        margin-top: 30px;
-    }
+	.tab-contents img {
+		margin-top: 30px;
+	}
 
+	footer .contents {
+		flex-direction: column;
+		margin-left: 20px;
+	}
+
+	.foot-1,
+	.foot-2,
+	.foot-3 {
+		max-width: 100%;
+		margin-bottom: 50px;
+	}
+
+	footer h1 {
+		margin-bottom: 10px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -802,12 +905,14 @@ nav ul ul li a {
 		font-size: 12px;
 	}
 
-	.ec, .app {
+	.ec,
+	.app {
 		flex-direction: column;
 		align-items: flex-start;
 	}
 
-	.text, .btn-contact {
+	.text,
+	.btn-contact {
 		margin-left: 50px;
 	}
 
